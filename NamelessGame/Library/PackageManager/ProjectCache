@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638674965296115918
-    m_Hash: 198850901
+      ticks: 638675897808246536
+    m_Hash: 3585212304
   m_LockFileStatus:
     m_FilePath: D:/Users/pokeb/Documents/Github/NamelessGame/NamelessGame/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638674965296158690
-    m_Hash: 3938388286
+      ticks: 638675897808246536
+    m_Hash: 1467483656
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
