@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638675897808246536
+      ticks: 638688001017235213
     m_Hash: 3585212304
   m_LockFileStatus:
     m_FilePath: D:/Users/pokeb/Documents/Github/NamelessGame/NamelessGame/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638675897808246536
+      ticks: 638688001017395450
     m_Hash: 1467483656
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -118,12 +118,14 @@ m_ResolvedPackages:
     - 2.4.4
     - 2.5.1
     - 2.5.2
+    - 2.6.0
     compatible:
     - 2.3.1
     - 2.4.3
     - 2.4.4
     - 2.5.1
     - 2.5.2
+    - 2.6.0
     recommended: 2.3.1
     deprecated: []
   dependencies: []
