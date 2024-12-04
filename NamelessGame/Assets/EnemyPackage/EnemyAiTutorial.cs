@@ -26,10 +26,15 @@ public class EnemyAiTutorial : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Audio
+    AudioSource audioSource;
+    public AudioSource shotSound;
+
     private void Awake()
     {
         player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -41,6 +46,15 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange) AttackPlayer();
+
+        if(agent.velocity.magnitude > 0.01f && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+        else if (agent.velocity.magnitude <= 0.01f && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 
     private void Patroling()
@@ -83,9 +97,16 @@ public class EnemyAiTutorial : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
+            ///
+
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+
+            if(shotSound != null)
+            {
+                shotSound.Play();
+            }
             ///End of attack code
 
             alreadyAttacked = true;
