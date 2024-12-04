@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
-
+    AudioSource footsteps;
     public InputActionReference moveAction;
     public InputActionReference lookAction;
     public Transform camRef;
@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;   
+        footsteps = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -40,5 +41,14 @@ public class CharacterController : MonoBehaviour
         move.y = 0f;
 
         transform.Translate(move * movementSpeed * Time.deltaTime, Space.World);
+
+        if(direction != Vector2.zero && !footsteps.isPlaying)
+        {
+            footsteps.Play();
+        }
+        else if (direction ==  Vector2.zero && footsteps.isPlaying)
+        {
+            footsteps.Stop();
+        }
     }
 }
