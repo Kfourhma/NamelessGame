@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
+    public AudioSource AudioSource;
     AudioSource footsteps;
     public InputActionReference moveAction;
     public InputActionReference lookAction;
@@ -44,6 +45,8 @@ public class CharacterController : MonoBehaviour
 
         if(direction != Vector2.zero && !footsteps.isPlaying)
         {
+            AudioSource.pitch = Random.Range(0.8f, 1f);
+            AudioSource.panStereo = Random.Range(-0.15f, 0.15f);   
             footsteps.Play();
         }
         else if (direction ==  Vector2.zero && footsteps.isPlaying)
