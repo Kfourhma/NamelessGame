@@ -2320,6 +2320,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -2409,6 +2413,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -6734,6 +6742,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -9381,6 +9393,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -9389,6 +9405,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6ae6c82b2ab4c9c41b5701afc46bbd0d, type: 3}
+    - target: {fileID: 7443153905414165266, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: MaxDistance
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8425743786477111706, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_NavMeshData
       value: 
@@ -9872,6 +9892,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -10867,6 +10891,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3257949828183740815, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: AudioManager
+      value: 
+      objectReference: {fileID: 239340025}
     - target: {fileID: 6171012214163008495, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_Resource
       value: 
@@ -10875,6 +10903,18 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6ae6c82b2ab4c9c41b5701afc46bbd0d, type: 3}
+    - target: {fileID: 7443153905414165266, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: MaxDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443153905414165266, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443153905414165266, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8425743786477111706, guid: ffa027d5d5f5a1146afb6d8d20440a2d, type: 3}
       propertyPath: m_NavMeshData
       value: 
