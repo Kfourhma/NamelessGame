@@ -7,12 +7,10 @@ using UnityEngine.Audio;
 public class EnemyEncounter : MonoBehaviour
 {
     public AudioSource audioSource;
-    AudioMixer audioMixer;
+    public AudioManager audioManager;
     GameObject enemy;
 
-    public AudioMixerSnapshot normalSnapshot;
-    public AudioMixerSnapshot combatSnapshot;
-
+    private bool inCombat = false;
 
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
@@ -21,14 +19,23 @@ public class EnemyEncounter : MonoBehaviour
         Debug.Log("Trigger entered");
         if (other.CompareTag("Player"))
         {
-            combatSnapshot.TransitionTo(1.5f);
-            Debug.Log("player entered");
-            if (audioSource != null && !audioSource.isPlaying)
+            if (audioManager.GetCurrentSnapshot() == audioManager.voidSnapshot)
             {
-                Debug.Log("audio playing");
-                audioSource.Play();
-                audioSource.loop = true;
+                return;
+            }
 
+            if(!inCombat)
+            { 
+                audioManager.TransitionToSnapshot(audioManager.combatSnapshot, 7f);
+                inCombat = true;
+                
+                if (audioSource != null && !audioSource.isPlaying)
+                {
+                    Debug.Log("audio playing");
+                    audioSource.Play();
+                    audioSource.loop = true;
+
+                }
             }
         }
     }
@@ -37,10 +44,19 @@ public class EnemyEncounter : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Enemy exited");
-            normalSnapshot.TransitionTo(2.0f);
-            StartCoroutine(StopAudioWDelay(2.0f));
 
+            if (audioManager.GetCurrentSnapshot() == audioManager.voidSnapshot)
+            {
+                return;
+            }
+
+            if (inCombat)
+            {
+                Debug.Log("Enemy exited");
+                audioManager.TransitionToSnapshot(audioManager.normalSnapshot, 7f);
+                inCombat = false;
+                StartCoroutine(StopAudioWDelay(2.0f));
+            }
         }
     }
 

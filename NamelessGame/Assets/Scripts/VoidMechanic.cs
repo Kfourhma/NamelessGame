@@ -5,6 +5,7 @@ using UnityEngine.Audio;
 
 public class VoidMechanic : MonoBehaviour
 {
+    public AudioSource voidAmbience;
 
     public AudioMixerSnapshot normalSnapshot;
     public AudioMixerSnapshot voidSnapshot;
@@ -12,7 +13,8 @@ public class VoidMechanic : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            voidSnapshot.TransitionTo(3f);
+            voidSnapshot.TransitionTo(7f);
+            voidAmbience.Play();
             Debug.Log("player entered into void");
         }
     }
@@ -21,7 +23,7 @@ public class VoidMechanic : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            normalSnapshot.TransitionTo(3f);
+            normalSnapshot.TransitionTo(7f);
             Debug.Log("player exited out of void");
         }
     }
