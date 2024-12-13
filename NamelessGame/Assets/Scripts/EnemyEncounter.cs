@@ -8,7 +8,7 @@ public class EnemyEncounter : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioManager audioManager;
-    GameObject enemy;
+    public GameObject enemy;
 
     private bool inCombat = false;
 
@@ -56,6 +56,25 @@ public class EnemyEncounter : MonoBehaviour
                 audioManager.TransitionToSnapshot(audioManager.normalSnapshot, 7f);
                 inCombat = false;
                 StartCoroutine(StopAudioWDelay(2.0f));
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("Enemy destroyed");
+        if (inCombat)
+        {
+            // Transition to the normal snapshot
+            audioManager.TransitionToSnapshot(audioManager.normalSnapshot, 7f);
+            inCombat = false;
+
+            // Stop and cleanup audio
+            if (audioSource != null)
+            {
+                audioSource.Stop();
+                audioSource.loop = false;
+                Debug.Log("Audio stopped");
             }
         }
     }

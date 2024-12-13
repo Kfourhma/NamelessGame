@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: ff3de436a9ba9974e96e156265353834
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: swordSwing(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: swordSwing(Clone)
+      position: {x: -0, y: 0.13727921, z: -0.010723278}
+      rotation: {x: 0.0009654381, y: 1.1112943e-16, z: -1.1112941e-16, w: 0.9999995}
+      scale: {x: 54.299515, y: 29.834908, z: 27.448112}
+    - name: Bone
+      parentName: Armature
+      position: {x: -1.0983265e-12, y: -0.0010800927, z: 0.0000018746476}
+      rotation: {x: 0.6728094, y: 0.02418497, z: -0.028052486, w: 0.73888814}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1.0000002}
+    - name: Bone.001
+      parentName: Bone
+      position: {x: -1.3096724e-10, y: 0.01403928, z: -1.36788e-10}
+      rotation: {x: -0.49527192, y: -0.062113933, z: 0.05417847, w: 0.8648192}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: -2.2846506e-11, y: 0.0089287795, z: -9.46602e-11}
+      rotation: {x: 0.10337077, y: -0.008059989, z: 0.70227, w: 0.7043199}
+      scale: {x: 0.9999998, y: 0.9999998, z: 1}
+    - name: Bone.002_end
+      parentName: Bone.002
+      position: {x: -1.0062649e-10, y: 0.008028794, z: 7.4069244e-11}
+      rotation: {x: 0.00000003805326, y: 0.000000050131348, z: 0.000000041985913, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone.002_end_end
+      parentName: Bone.002_end
+      position: {x: -0, y: 0.008028791, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: swordSwing(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Plane
+      parentName: swordSwing(Clone)
+      position: {x: 0.00000001132488, y: 0.13365008, z: -0.05526276}
+      rotation: {x: -0.000017450031, y: 3.5448122e-10, z: 1.4044813e-10, w: 1}
+      scale: {x: 7.1864395, y: 7.8971786, z: 7.698336}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

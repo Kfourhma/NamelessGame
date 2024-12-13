@@ -6,11 +6,14 @@ public class EnemyAiTutorial : MonoBehaviour
 {
     public NavMeshAgent agent;
 
+    public GameObject musicHolder;
+
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
+    int currenthealth;
+    public int maxHealth;
 
     //Patroling
     public Vector3 walkPoint;
@@ -33,6 +36,8 @@ public class EnemyAiTutorial : MonoBehaviour
     {
         player = GameObject.Find("PlayerObj").transform;
         agent = GetComponent<NavMeshAgent>();
+
+        currenthealth = maxHealth;
     }
 
     private void Update()
@@ -109,12 +114,13 @@ public class EnemyAiTutorial : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        currenthealth -= damage;
 
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+        if (currenthealth <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()
     {
+        Destroy(musicHolder);
         Destroy(gameObject);
     }
 
